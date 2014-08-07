@@ -1,0 +1,9 @@
+---
+
+- name: install
+  shell: >
+    wget https://raw.githubusercontent.com/neo4j-contrib/m2/master/releases/org/neo4j/neo4j-spatial/0.13-neo4j-2.1.2/neo4j-spatial-0.13-neo4j-2.1.2-server-plugin.zip -O /tmp/plugin.zip && unzip -o /tmp/plugin.zip -d /usr/share/neo4j/plugins && rm /tmp/plugin.zip
+    creates=/usr/share/neo4j/plugins/neo4j-spatial-0.13-neo4j-2.1.2.jar
+  notify:
+    - neo4j server restart
+  sudo: yes
