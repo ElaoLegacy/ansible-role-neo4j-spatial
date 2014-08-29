@@ -2,6 +2,7 @@
 
 dependencies:
 
+  - { role: elao.base }
   - { role: elao.neo4j-server }
 
 galaxy_info:
